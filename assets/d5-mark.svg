@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+  <title id="title">D5 大赛标志</title>
+  <desc id="desc">D 与 5 的笔画融合成开放式灶台与料理台轮廓，并结合锅具、火焰和电路符号。</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 28v184h82c80 0 129-33 129-92S216 28 136 28H54" stroke="#2f6294" stroke-width="25"/>
+    <path d="M253 29H147v84h58c37 0 60 19 60 50 0 32-26 49-67 49h-51" stroke="#f47b32" stroke-width="25"/>
+    <path d="M125 113c0-18 14-32 32-32h24c18 0 32 14 32 32v7c0 18-14 32-32 32h-24c-18 0-32-14-32-32z" stroke="#f3ecdf" stroke-width="6"/>
+    <path d="M213 105h30" stroke="#f3ecdf" stroke-width="7"/>
+    <path d="M70 63h43l15 15M69 177h38l17-17M222 64h21" stroke="#f3ecdf" stroke-width="4" opacity=".9"/>
+    <path d="M42 216h239" stroke="#f3ecdf" stroke-width="8"/>
+  </g>
+  <g fill="#f3ecdf">
+    <circle cx="70" cy="63" r="6"/><circle cx="69" cy="177" r="6"/><circle cx="243" cy="64" r="6"/>
+  </g>
+  <path d="M169 145c15 17 17 27 10 37-6 9-20 11-29 3-10-9-9-22 4-39 2 11 7 15 10 16-1-7 1-12 5-17z" fill="#f47b32"/>
+</svg>

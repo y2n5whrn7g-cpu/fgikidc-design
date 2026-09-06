@@ -1,11 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#080808"/>
-  <circle cx="940" cy="235" r="260" fill="#d8ff3e" opacity=".92"/>
-  <circle cx="940" cy="235" r="145" fill="#15170f"/>
-  <text x="84" y="110" font-family="Arial,sans-serif" font-size="28" letter-spacing="5" fill="#d8ff3e">FGIKIDC · 2026</text>
-  <text x="84" y="245" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="600" fill="#ffffff">“艾玛杯”第五代智能厨房</text>
-  <text x="84" y="330" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="600" fill="#ffffff">国际设计大赛</text>
-  <text x="84" y="414" font-family="Arial,sans-serif" font-size="23" fill="#999999">The 5th-Generation Intelligent Kitchen International Design Competition</text>
-  <rect x="84" y="480" width="180" height="56" fill="#d8ff3e"/>
-  <text x="174" y="516" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#080808">立即报名 →</text>
+  <rect width="1200" height="630" fill="#1b1e22"/>
+  <rect width="22" height="630" fill="#f47b32"/>
+  <circle cx="972" cy="315" r="285" fill="#173b63" opacity=".45"/>
+  <circle cx="972" cy="315" r="208" fill="none" stroke="#f3ecdf" opacity=".12"/>
+  <g transform="translate(742 132) scale(1.32)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 28v184h82c80 0 129-33 129-92S216 28 136 28H54" stroke="#2f6294" stroke-width="25"/>
+    <path d="M253 29H147v84h58c37 0 60 19 60 50 0 32-26 49-67 49h-51" stroke="#f47b32" stroke-width="25"/>
+    <path d="M125 113c0-18 14-32 32-32h24c18 0 32 14 32 32v7c0 18-14 32-32 32h-24c-18 0-32-14-32-32zM213 105h30" stroke="#f3ecdf" stroke-width="6"/>
+    <path d="M70 63h43l15 15M69 177h38l17-17M222 64h21M42 216h239" stroke="#f3ecdf" stroke-width="5"/>
+    <circle cx="70" cy="63" r="6" fill="#f3ecdf" stroke="none"/><circle cx="69" cy="177" r="6" fill="#f3ecdf" stroke="none"/><circle cx="243" cy="64" r="6" fill="#f3ecdf" stroke="none"/>
+    <path d="M169 145c15 17 17 27 10 37-6 9-20 11-29 3-10-9-9-22 4-39 2 11 7 15 10 16-1-7 1-12 5-17z" fill="#f47b32" stroke="none"/>
+  </g>
+  <text x="82" y="142" font-family="Arial,sans-serif" font-size="112" font-weight="800" letter-spacing="-8" fill="#f3ecdf">D5</text>
+  <text x="82" y="190" font-family="Arial,sans-serif" font-size="19" letter-spacing="4" fill="#f47b32">INTERNATIONAL DESIGN COMPETITION</text>
+  <text x="82" y="292" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="46" font-weight="600" fill="#f3ecdf">“艾玛杯”第五代智能厨房</text>
+  <text x="82" y="360" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="46" font-weight="600" fill="#f3ecdf">国际设计大赛 (D5大赛)</text>
+  <text x="82" y="421" font-family="Arial,sans-serif" font-size="19" fill="#aeb3b8">The 5th-Generation Intelligent Kitchen</text>
+  <text x="82" y="451" font-family="Arial,sans-serif" font-size="19" fill="#aeb3b8">International Design Competition</text>
+  <rect x="82" y="502" width="184" height="54" rx="2" fill="#f47b32"/>
+  <text x="174" y="536" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="19" font-weight="700" fill="#17191c">了解大赛 →</text>
 </svg>

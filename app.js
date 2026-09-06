@@ -110,7 +110,7 @@
     if(!url){showToast('当前为本地文件，请在网站正式上线后分享链接。');return;}
     if(/MicroMessenger/i.test(navigator.userAgent)){showToast('请点击微信右上角“…”分享给朋友或朋友圈。');return;}
     try{
-      if(navigator.share)await navigator.share({title:'“艾玛杯”第五代智能厨房国际设计大赛',text:'探索第五代智能厨房创新设计，赛事安排即将公布。',url});
+      if(navigator.share)await navigator.share({title:'D5｜“艾玛杯”第五代智能厨房国际设计大赛 (D5大赛)',text:'探索第五代智能厨房创新设计，赛事安排即将公布。',url});
       else if(navigator.clipboard){await navigator.clipboard.writeText(url);showToast('链接已复制，可粘贴到微信分享。');}
       else showToast('请复制浏览器地址栏中的网站链接进行分享。');
     }catch(error){if(error.name!=='AbortError')showToast('请复制浏览器地址栏中的网站链接进行分享。');}

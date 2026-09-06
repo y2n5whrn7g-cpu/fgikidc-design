@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#080808"/><rect x="7" y="7" width="50" height="50" fill="none" stroke="#d8ff3e" stroke-width="2"/><text x="32" y="39" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#d8ff3e">FG</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#1b1e22"/>
+  <path d="M13 12v40h14c17 0 27-8 27-20S44 12 27 12H13" fill="none" stroke="#2f6294" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M51 13H30v17h11c8 0 13 4 13 11 0 7-5 11-14 11H30" fill="none" stroke="#f47b32" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
