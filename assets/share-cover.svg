@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#080808"/>
+  <circle cx="940" cy="235" r="260" fill="#d8ff3e" opacity=".92"/>
+  <circle cx="940" cy="235" r="145" fill="#15170f"/>
+  <text x="84" y="110" font-family="Arial,sans-serif" font-size="28" letter-spacing="5" fill="#d8ff3e">FGIKIDC · 2026</text>
+  <text x="84" y="245" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="600" fill="#ffffff">“艾玛杯”第五代智能厨房</text>
+  <text x="84" y="330" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="600" fill="#ffffff">国际设计大赛</text>
+  <text x="84" y="414" font-family="Arial,sans-serif" font-size="23" fill="#999999">The 5th-Generation Intelligent Kitchen International Design Competition</text>
+  <rect x="84" y="480" width="180" height="56" fill="#d8ff3e"/>
+  <text x="174" y="516" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#080808">立即报名 →</text>
+</svg>
