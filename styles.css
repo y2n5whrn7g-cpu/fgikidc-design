@@ -203,3 +203,7 @@ main{animation:pageFadeIn .36s ease-out both}
   .state-meta{grid-template-columns:1fr 1fr;gap:14px}
   .breadcrumbs{font-size:13px;gap:8px;line-height:1.9}
 }
+
+/* the 报名 tile uses the same apply dialog as the top button, so it is a button, not a link */
+.d5-grid button.d5-tile{width:100%;font:inherit;text-align:left;cursor:pointer}
+.d5-grid button.d5-tile:focus-visible{border-color:var(--orange);background:#fffdfa;transform:translateY(-3px)}

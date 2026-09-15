@@ -24,7 +24,7 @@ body.admin :focus-visible{outline:3px solid var(--admin-orange);outline-offset:3
 /* sidebar */
 .admin-side{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:26px;padding:26px 22px;background:var(--admin-soft);border-right:1px solid var(--admin-line)}
 .admin-brand{display:flex;align-items:center;gap:12px}
-.admin-brand span{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #dcdcdc;color:#555;font-size:13px;font-weight:600;letter-spacing:.06em;background:#fff}
+.admin-brand span{display:flex;align-items:center;justify-content:center;width:50px;height:36px;border:1px solid #dcdcdc;color:#555;font-size:12px;font-weight:600;letter-spacing:.04em;background:#fff}
 .admin-brand em{font-style:normal;font-size:15px;color:#555;letter-spacing:.02em}
 .admin-menu{display:flex;flex-direction:column;gap:2px;margin:0;padding:0}
 .admin-menu a,.admin-menu button{display:block;width:100%;padding:11px 12px;border:0;border-left:2px solid transparent;background:none;text-align:left;font-size:14.5px;color:var(--admin-muted);transition:color .18s,background .18s,border-color .18s}
