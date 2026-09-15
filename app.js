@@ -132,3 +132,25 @@ document.querySelectorAll('.nav-group').forEach(group=>group.addEventListener('t
 }));
 document.addEventListener('click',event=>{if(!event.target.closest('.main-nav')) document.querySelectorAll('.nav-group').forEach(g=>g.open=false);});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('.nav-group').forEach(g=>g.open=false);});
+
+
+// Desktop pointer support: open a nav group on hover with a short grace delay, so the
+// dropdown neither flickers nor disappears while the pointer travels into it.
+(() => {
+  const groups = [...document.querySelectorAll('.nav-group')];
+  if (!groups.length) return;
+  let timer;
+  const isDesktopPointer = (e) => innerWidth > 1100 && e.pointerType === 'mouse';
+  groups.forEach(group => {
+    group.addEventListener('pointerenter', (e) => {
+      if (!isDesktopPointer(e)) return;
+      clearTimeout(timer);
+      timer = setTimeout(() => { groups.forEach(o => { if (o !== group) o.open = false; }); group.open = true; }, 70);
+    });
+    group.addEventListener('pointerleave', () => {
+      if (innerWidth <= 1100) return;
+      clearTimeout(timer);
+      timer = setTimeout(() => { group.open = false; }, 220);
+    });
+  });
+})();

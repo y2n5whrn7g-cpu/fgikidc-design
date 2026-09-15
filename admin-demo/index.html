@@ -1,0 +1,142 @@
+<!doctype html>
+<!-- ADMIN UI DEMO — 后台界面演示（纯前端静态稿：无数据库、无账号、无权限、无真实业务数据） -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>控制台｜内容管理后台界面演示</title>
+<meta name="description" content="后台界面演示：用于展示赛事网站后续可管理的内容结构。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<a class="skip-link" href="#admin-main">跳至正文</a>
+<div class="admin-shell">
+  <aside class="admin-side">
+    <a class="admin-brand" href="../index.html"><span>D5</span><em>内容管理</em></a>
+    <nav class="admin-menu" aria-label="后台菜单">
+      <a class="is-active" href="index.html" aria-current="page">控制台</a>
+      <button type="button" data-demo>赛事信息</button>
+      <button type="button" data-demo>栏目管理</button>
+      <button type="button" data-demo>新闻资讯</button>
+      <button type="button" data-demo>赛事日程</button>
+      <button type="button" data-demo>参赛指南</button>
+      <button type="button" data-demo>成果展示</button>
+      <button type="button" data-demo>评审专家</button>
+      <button type="button" data-demo>合作机构</button>
+      <button type="button" data-demo>报名管理</button>
+      <button type="button" data-demo>页面设置</button>
+    </nav>
+    <div class="admin-side-note">
+      <p>后台界面演示</p>
+      <p>正式后台在合同确认后开发。</p>
+      <a href="../index.html">返回前台首页 →</a>
+    </div>
+  </aside>
+
+  <div class="admin-body">
+    <header class="admin-top">
+      <div class="admin-title">
+        <p class="admin-crumb">后台 / 控制台</p>
+        <h1>控制台</h1>
+      </div>
+      <div class="admin-tools">
+        <span class="admin-chip">ADMIN UI DEMO</span>
+        <label class="admin-search"><input type="search" placeholder="搜索内容（演示）" aria-label="搜索内容"></label>
+        <a class="admin-cta" href="../index.html">查看前台</a>
+      </div>
+    </header>
+
+    <main id="admin-main">
+      <section class="admin-kpis" aria-label="内容概况">
+        <dl class="admin-kpi">
+          <dt>已发布内容</dt>
+          <dd>18</dd>
+          <small>页面与栏目合计</small>
+        </dl>
+        <dl class="admin-kpi is-accent">
+          <dt>待发布内容</dt>
+          <dd>6</dd>
+          <small>等组委会确认信息</small>
+        </dl>
+        <dl class="admin-kpi">
+          <dt>报名意向</dt>
+          <dd>128</dd>
+          <small>演示数据，未接入正式报名</small>
+        </dl>
+        <dl class="admin-kpi">
+          <dt>最近更新</dt>
+          <dd class="admin-kpi-text">待组委会确认</dd>
+          <small>正式发布后自动记录</small>
+        </dl>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>待发布内容</h2>
+          <span>示例数据</span>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr><th scope="col">标题</th><th scope="col">分类</th><th scope="col">状态</th><th scope="col">更新时间</th><th scope="col">操作</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>赛事信息发布说明</td><td>大赛公告</td><td><span class="admin-state">待发布</span></td><td>待组委会确认</td><td><button type="button" class="admin-link" data-demo>编辑</button></td></tr>
+            <tr><td>交流与展览动态</td><td>活动资讯</td><td><span class="admin-state">筹备中</span></td><td>待组委会确认</td><td><button type="button" class="admin-link" data-demo>编辑</button></td></tr>
+            <tr><td>评审专家</td><td>评审专家</td><td><span class="admin-state">筹备中</span></td><td>待组委会确认</td><td><button type="button" class="admin-link" data-demo>编辑</button></td></tr>
+            <tr><td>奖项设置</td><td>奖项与评审</td><td><span class="admin-state">筹备中</span></td><td>待组委会确认</td><td><button type="button" class="admin-link" data-demo>编辑</button></td></tr>
+            <tr><td>报名与投稿入口</td><td>报名管理</td><td><span class="admin-state">待开放</span></td><td>待组委会确认</td><td><button type="button" class="admin-link" data-demo>编辑</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>最近修改</h2>
+          <span>示例数据</span>
+        </div>
+        <ul class="admin-list">
+          <li><span>交流与展览动态 · 活动资讯</span><span class="admin-state">筹备中</span></li>
+          <li><span>赛事日程 · 报名与投稿</span><span class="admin-state">筹备中</span></li>
+          <li><span>参赛指南 · 报名与投稿</span><span class="admin-state">待发布</span></li>
+          <li><span>页面设置 · 页脚信息</span><span class="admin-state">待发布</span></li>
+        </ul>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>快捷入口</h2>
+          <span>演示操作</span>
+        </div>
+        <div class="admin-quick">
+          <button type="button" data-demo>新增资讯</button>
+          <button type="button" data-demo>发布公告</button>
+          <button type="button" data-demo>更新赛事日程</button>
+          <button type="button" data-demo>编辑页面内容</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="admin-foot">
+      <p>ADMIN UI DEMO · 后台界面演示版本，仅用于说明后续可管理的内容范围，不含数据库、账号与真实业务数据。</p>
+    </footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+  const toast = document.getElementById('toast');
+  let timer;
+  document.querySelectorAll('[data-demo]').forEach((el) => {
+    el.addEventListener('click', () => {
+      toast.textContent = '演示界面：该操作在正式后台中可用。';
+      toast.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('show'), 2600);
+    });
+  });
+</script>
+</body>
+</html>
