@@ -34,7 +34,7 @@
   }
   menu.addEventListener('click',()=>setMenu(menu.getAttribute('aria-expanded') !== 'true'));
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ if(nav.classList.contains('open')) setMenu(false,false); }));
-  window.addEventListener('resize',()=>{ if(innerWidth>1200 && nav.classList.contains('open'))setMenu(false,false); });
+  window.addEventListener('resize',()=>{ if(innerWidth>1100 && nav.classList.contains('open'))setMenu(false,false); });
   const onScroll=()=>header.classList.toggle('is-light',(locked?scrollY:window.scrollY)>($('.hero')?.offsetHeight || 82)-84);
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
   function openApply(event) {
