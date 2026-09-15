@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const config = window.FGIKIDC_CONFIG || {};
+  const config = window.SITE_CONFIG || {};
   const $ = (selector) => document.querySelector(selector);
   const header = $('.site-header'), menu = $('.menu-btn'), nav = $('.main-nav');
   const modal = $('#applyModal'), sheet = $('.apply-sheet'), toast = $('#toast');
@@ -35,7 +35,7 @@
   menu.addEventListener('click',()=>setMenu(menu.getAttribute('aria-expanded') !== 'true'));
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ if(nav.classList.contains('open')) setMenu(false,false); }));
   window.addEventListener('resize',()=>{ if(innerWidth>1200 && nav.classList.contains('open'))setMenu(false,false); });
-  const onScroll=()=>header.classList.toggle('is-light',(locked?scrollY:window.scrollY)>$('.hero').offsetHeight-84);
+  const onScroll=()=>header.classList.toggle('is-light',(locked?scrollY:window.scrollY)>($('.hero')?.offsetHeight || 82)-84);
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
   function openApply(event) {
     if (official) { location.assign(official); return; }
@@ -82,7 +82,7 @@
       form.querySelectorAll('[hidden]').forEach(el=>el.style.display='none');
       const link=document.createElement('a'); link.className='external-entry';link.href=official;link.textContent='前往正式报名入口 ↗';form.append(link);
     } else if(!api){
-      button.disabled=true;button.textContent='报名开放时间即将公布';status.textContent='报名尚未开放，当前填写不会提交。';
+      form.querySelectorAll('input,select').forEach(el=>el.disabled=true);button.disabled=true;button.textContent='报名开放时间即将公布';status.textContent='报名尚未开放，当前不收集或保存个人信息。';
     } else {
       status.textContent='请填写报名意向。作品提交要求以组委会通知为准。';
       note.textContent='提交内容仅用于报名联系，具体信息处理规则以组委会公布的说明为准。';
@@ -110,18 +110,25 @@
     if(!url){showToast('当前为本地文件，请在网站正式上线后分享链接。');return;}
     if(/MicroMessenger/i.test(navigator.userAgent)){showToast('请点击微信右上角“…”分享给朋友或朋友圈。');return;}
     try{
-      if(navigator.share)await navigator.share({title:'D5｜“艾玛杯”第五代智能厨房国际设计大赛 (D5大赛)',text:'探索第五代智能厨房创新设计，赛事安排即将公布。',url});
+      if(navigator.share)await navigator.share({title:config.competitionName,text:'探索第五代智能厨房创新设计，赛事安排即将公布。',url});
       else if(navigator.clipboard){await navigator.clipboard.writeText(url);showToast('链接已复制，可粘贴到微信分享。');}
       else showToast('请复制浏览器地址栏中的网站链接进行分享。');
     }catch(error){if(error.name!=='AbortError')showToast('请复制浏览器地址栏中的网站链接进行分享。');}
   }));
   document.querySelectorAll('details').forEach(item=>{
-    const update=()=>item.querySelector('summary b').textContent=item.open?'−':'＋';update();item.addEventListener('toggle',update);
+    const update=()=>item.querySelector('summary b') && (item.querySelector('summary b').textContent=item.open?'−':'＋');update();item.addEventListener('toggle',update);
   });
   if('IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
       if(entry.isIntersecting){nav.querySelectorAll('a').forEach(a=>{if(a.hash==='#'+entry.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
     }),{rootMargin:'-15% 0px -65% 0px'});
-    nav.querySelectorAll('a').forEach(a=>{const target=$(a.hash);if(target)observer.observe(target);});
+    nav.querySelectorAll('a').forEach(a=>{const target=a.hash ? $(a.hash) : null;if(target)observer.observe(target);});
   }
 })();
+
+// Native details keep the menu usable without hover on touch devices.
+document.querySelectorAll('.nav-group').forEach(group=>group.addEventListener('toggle',()=>{
+  if(group.open && innerWidth>1100) document.querySelectorAll('.nav-group').forEach(other=>{if(other!==group)other.open=false;});
+}));
+document.addEventListener('click',event=>{if(!event.target.closest('.main-nav')) document.querySelectorAll('.nav-group').forEach(g=>g.open=false);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('.nav-group').forEach(g=>g.open=false);});

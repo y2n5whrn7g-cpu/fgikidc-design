@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://y2n5whrn7g-cpu.github.io/fgikidc-design/sitemap.xml
